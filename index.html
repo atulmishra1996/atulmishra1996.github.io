@@ -1,142 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atul Mishra - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Atul Mishra — Senior Software Engineer & Tech Lead building AI platforms, distributed systems, and enterprise-scale products." />
+  <title>Atul Mishra · Senior Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="container">
-            <h1 class="name">Atul Mishra</h1>
-            <p class="title">Web Developer</p>
-            <nav class="nav">
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <div class="bg-glow" aria-hidden="true"></div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>I'm a passionate web developer with experience in creating modern, responsive websites and web applications. I love turning ideas into reality through code.</p>
-                <div class="stats">
-                    <div class="stat">
-                        <h3>3+</h3>
-                        <p>Years Experience</p>
-                    </div>
-                    <div class="stat">
-                        <h3>20+</h3>
-                        <p>Projects Completed</p>
-                    </div>
-                    <div class="stat">
-                        <h3>15+</h3>
-                        <p>Happy Clients</p>
-                    </div>
-                </div>
-            </div>
+  <header class="site-header" id="top">
+    <nav class="nav container">
+      <a class="logo" href="#top">AM</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-badge">Available for senior engineering & tech lead roles</div>
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text">Atul Mishra</span>
+      </h1>
+      <p class="hero-subtitle">
+        Senior Software Engineer &amp; Tech Lead — I design and ship platforms at scale:
+        AI agent systems, distributed backends, and enterprise data pipelines.
+      </p>
+      <p class="hero-meta">
+        <span>Bengaluru, India</span>
+        <span class="dot">·</span>
+        <span>9+ years building production systems</span>
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projects">View work</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/atul-mishra-96b4a2a3/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/atulmishra1996" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <strong>9+</strong>
+          <span>Years experience</span>
         </div>
+        <div class="stat">
+          <strong>400M+</strong>
+          <span>Records migrated</span>
+        </div>
+        <div class="stat">
+          <strong>30+</strong>
+          <span>Engineers led</span>
+        </div>
+        <div class="stat">
+          <strong>6</strong>
+          <span>AI microservices shipped</span>
+        </div>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills</h2>
-            <div class="skills-list">
-                <div class="skill-item">
-                    <i class="fab fa-js-square"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-node-js"></i>
-                    <span>Node.js</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-python"></i>
-                    <span>Python</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <span>SQL</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-git-alt"></i>
-                    <span>Git</span>
-                </div>
-            </div>
-        </div>
+    <section id="about" class="section container reveal">
+      <div class="section-head">
+        <p class="eyebrow">About</p>
+        <h2>Platform builder who ships at scale</h2>
+      </div>
+      <div class="about-grid">
+        <p class="lead">
+          I'm a senior engineer and tech lead based in Bengaluru. I build systems that turn
+          complex requirements into reliable production software — from no-code financial
+          infrastructure at xalts to AI-native engineering platforms and high-volume migration
+          services at Zinnia.
+        </p>
+        <p>
+          My work spans backend architecture, team leadership, and hands-on delivery: microservices
+          on Kubernetes, event-driven workflows, RAG-based operational assistants, and multi-LLM
+          orchestration. I've scaled teams from 8 to 30+ engineers and owned hiring across
+          backend, frontend, DevOps, and QA.
+        </p>
+        <ul class="about-highlights">
+          <li>Tech Lead at Zinnia — insurtech platforms serving 100+ carriers</li>
+          <li>First backend engineer → Engineering Lead at xalts (financial infrastructure)</li>
+          <li>Backend &amp; platform experience at Simpl, Jisr, Zynga, and Hotstar</li>
+          <li>B.Tech Computer Science, Lovely Professional University</li>
+        </ul>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-list">
-                <div class="project-card">
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-stack e-commerce website built with React, Node.js, and MongoDB. Features include user authentication, product management, and payment integration.</p>
-                    <a href="#" class="project-link" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Task Management App</h3>
-                    <p>A responsive task management application with drag-and-drop functionality, built using React and Firebase for real-time updates.</p>
-                    <a href="#" class="project-link" target="_blank">View Project</a>
-                </div>
-                <div class="project-card">
-                    <h3>Weather Dashboard</h3>
-                    <p>A weather application that displays current and forecast weather data using OpenWeatherMap API and Chart.js for data visualization.</p>
-                    <a href="#" class="project-link" target="_blank">View Project</a>
-                </div>
-            </div>
+    <section id="experience" class="section section-alt">
+      <div class="container reveal">
+        <div class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2>Where I've built &amp; led</h2>
         </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>Senior Software Engineer · Tech Lead</h3>
+                  <p class="company">Zinnia</p>
+                </div>
+                <span class="timeline-date">Sep 2024 — Present</span>
+              </div>
+              <p class="timeline-location">Bengaluru · On-site</p>
+              <ul>
+                <li>Leading <strong>MinionBot</strong> — an AI software engineering platform that converts Jira/Confluence requirements into production-ready GitHub PRs across multiple enterprise repos.</li>
+                <li>Architected 6 independently deployable AI microservices: Tree-sitter indexing, Neo4j knowledge graphs, unified planning pipelines, and LLM-powered code execution on Kubernetes with Azure AD.</li>
+                <li>Built enterprise migration platform moving <strong>400M+ records</strong> from MSSQL to MongoDB with multi-threaded, fault-tolerant horizontal scaling.</li>
+                <li>Migrated legacy Camunda workflows to a custom Java orchestration service — improved throughput and reliability under high load.</li>
+                <li>Delivered RAG-based operational assistant over <strong>50,000+ documents</strong> using MMR, ColBERT, and multi-query retrieval.</li>
+              </ul>
+              <div class="tags">
+                <span>Java</span><span>Kubernetes</span><span>Neo4j</span><span>LLM</span><span>RAG</span><span>Azure AD</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>Engineering Lead</h3>
+                  <p class="company">xalts</p>
+                </div>
+                <span class="timeline-date">Aug 2023 — Aug 2024</span>
+              </div>
+              <p class="timeline-location">Bangalore</p>
+              <ul>
+                <li>Joined as first backend engineer; grew to lead backend, frontend, DevOps, and QA for the CDA no-code platform.</li>
+                <li>Designed distributed systems: webhook triggers, schedulers, token managers, and indexers from scratch.</li>
+                <li>Scaled team from 8 to 30+ engineers; owned hiring across all engineering disciplines.</li>
+                <li>Optimized DB calls by ~70% on CDA execution paths; built deployment pipelines on AWS and GCP.</li>
+              </ul>
+              <div class="tags">
+                <span>TypeScript</span><span>Fastify</span><span>Java</span><span>Spring</span><span>AWS</span><span>GCP</span><span>RabbitMQ</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>Senior Software Engineer</h3>
+                  <p class="company">Simpl</p>
+                </div>
+                <span class="timeline-date">Jul 2022 — Apr 2023</span>
+              </div>
+              <ul>
+                <li>Shipped Banner Service end-to-end in Java/Spring Boot.</li>
+                <li>Integrated WordPress e-commerce with Simpl Checkout via Python/FastAPI.</li>
+                <li>Reduced consumer lag in event and message management (Kafka).</li>
+              </ul>
+              <div class="tags"><span>Java</span><span>Spring</span><span>Python</span><span>FastAPI</span><span>Kafka</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>Senior Software Developer</h3>
+                  <p class="company">Jisr HR</p>
+                </div>
+                <span class="timeline-date">Aug 2021 — Jul 2022</span>
+              </div>
+              <ul>
+                <li>Built Performance Management service from scratch for goals and employee tracking.</li>
+                <li>Collaborated with Payroll team on system efficiency; optimized HR Attendance APIs.</li>
+              </ul>
+              <div class="tags"><span>Ruby on Rails</span><span>Java</span><span>Kafka</span><span>AWS</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>Software Development Engineer</h3>
+                  <p class="company">Zynga</p>
+                </div>
+                <span class="timeline-date">Sep 2019 — Aug 2021</span>
+              </div>
+              <ul>
+                <li>Developed Tropical Escape features; optimized orderboard crafting.</li>
+                <li>Shipped Collection Event mini-game — measurably improved player engagement.</li>
+              </ul>
+              <div class="tags"><span>C#</span><span>.NET</span><span>Unity</span><span>Python</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>Software Development Engineer</h3>
+                  <p class="company">Disney+ Hotstar</p>
+                </div>
+                <span class="timeline-date">Jul 2018 — Aug 2019</span>
+              </div>
+              <ul>
+                <li>iOS social pod: integrated AsyncDisplayKit, replacing Auto Layout across UI.</li>
+                <li>Built leaderboard, scorecard, and voting/polling for IPL &amp; Bigg Boss at scale.</li>
+              </ul>
+              <div class="tags"><span>Swift</span><span>Objective-C</span><span>RxSwift</span><span>AWS</span></div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-card">
+              <div class="timeline-top">
+                <div>
+                  <h3>Software Engineer Intern</h3>
+                  <p class="company">ClearTax</p>
+                </div>
+                <span class="timeline-date">Aug 2017 — Jun 2018</span>
+              </div>
+              <ul>
+                <li>Built Autopivot (Ruby on Rails) integrated with Pivotal Tracker for sprint tracking.</li>
+                <li>Python scraper monitoring government websites with change notifications.</li>
+              </ul>
+              <div class="tags"><span>Ruby on Rails</span><span>Python</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-            <div class="contact-links">
-                <a href="mailto:atul.mishra@example.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/atulmishra1996" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/atulmishra1996" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://twitter.com/atulmishra1996" target="_blank"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
+    <section id="projects" class="section container reveal">
+      <div class="section-head">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected work &amp; side builds</h2>
+      </div>
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-icon">🤖</div>
+          <h3>MinionBot</h3>
+          <p class="project-meta">Zinnia · AI Platform · 2024 — Present</p>
+          <p>AI software engineering platform: Jira/Confluence → design → multi-repo code generation → validation → automated PRs. Human-in-the-loop governance with streaming workflows and sandbox validation.</p>
+          <div class="tags">
+            <span>LLM Orchestration</span><span>Neo4j</span><span>Tree-sitter</span><span>K8s</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">𝕏</div>
+          <h3>X Tweet Helper</h3>
+          <p class="project-meta">Open source · Next.js · 2026</p>
+          <p>Self-hosted X growth workspace — AI tweet/thread/blog studio, analytics dashboard, scheduling, and a free Open-in-X posting workflow when API credits aren't available.</p>
+          <div class="tags">
+            <span>Next.js</span><span>TypeScript</span><span>Postgres</span><span>AI SDK</span>
+          </div>
+          <a class="project-link" href="https://github.com/atulmishra1996/x-tweet-helper" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">⚡</div>
+          <h3>No-Code Platform (CDA)</h3>
+          <p class="project-meta">xalts · Distributed Systems · 2023 — 2024</p>
+          <p>Production-grade no-code infrastructure for financial institutions: webhook triggers, schedulers, token managers, and indexers with AWS/GCP deployment pipelines.</p>
+          <div class="tags">
+            <span>TypeScript</span><span>Fastify</span><span>Microservices</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">📊</div>
+          <h3>Enterprise Migration Platform</h3>
+          <p class="project-meta">Zinnia · Data Engineering · 2024</p>
+          <p>High-performance migration service for 400M+ records from MSSQL to MongoDB — multi-threaded, fault-tolerant, horizontally scalable. Now the standard for enterprise data transitions.</p>
+          <div class="tags">
+            <span>Java</span><span>MongoDB</span><span>MSSQL</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">💬</div>
+          <h3>AI Operational Assistant</h3>
+          <p class="project-meta">Zinnia · RAG · 2024</p>
+          <p>In-house RAG chat system over 50K+ documents with MMR, ColBERT, and multi-query retrieval for production support accuracy.</p>
+          <div class="tags">
+            <span>RAG</span><span>LLM</span><span>Vector Search</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">🏠</div>
+          <h3>Personal Life Dashboard</h3>
+          <p class="project-meta">Side project</p>
+          <p>Personal productivity dashboard for tracking life metrics and goals.</p>
+          <a class="project-link" href="https://github.com/atulmishra1996/personal-life-dashboard" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">📈</div>
+          <h3>CodeChef Scraper</h3>
+          <p class="project-meta">Python · Open source</p>
+          <p>Fetches contest rankings, ratings, problems solved, and contest history for competitive programming profiles.</p>
+          <a class="project-link" href="https://github.com/Killcode1996/CodechefScrapper" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-icon">📱</div>
+          <h3>Budgie</h3>
+          <p class="project-meta">Android · Campus marketplace</p>
+          <p>Buy/sell second-hand products on campus with seller reviews and in-app messaging.</p>
+          <a class="project-link" href="https://github.com/Killcode1996/Budgie" target="_blank" rel="noopener">View on GitHub →</a>
+        </article>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Atul Mishra. All rights reserved.</p>
+    <section id="skills" class="section section-alt">
+      <div class="container reveal">
+        <div class="section-head">
+          <p class="eyebrow">Skills</p>
+          <h2>Technical toolkit</h2>
         </div>
-    </footer>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <div class="skill-pills">
+              <span>Java</span><span>TypeScript</span><span>Python</span><span>Ruby</span><span>C++</span><span>C#</span><span>Swift</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Backend &amp; Frameworks</h3>
+            <div class="skill-pills">
+              <span>Spring Boot</span><span>FastAPI</span><span>Fastify</span><span>Rails</span><span>Node.js</span><span>Next.js</span><span>GraphQL</span><span>REST</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Data &amp; Messaging</h3>
+            <div class="skill-pills">
+              <span>PostgreSQL</span><span>MongoDB</span><span>DynamoDB</span><span>Neo4j</span><span>Kafka</span><span>RabbitMQ</span><span>Redis</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Cloud &amp; DevOps</h3>
+            <div class="skill-pills">
+              <span>AWS</span><span>GCP</span><span>Azure</span><span>Kubernetes</span><span>CI/CD</span><span>Docker</span><span>Terraform</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>AI &amp; Platform</h3>
+            <div class="skill-pills">
+              <span>LLM Orchestration</span><span>RAG</span><span>Multi-agent Systems</span><span>System Design</span><span>Event-Driven Architecture</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h3>Leadership</h3>
+            <div class="skill-pills">
+              <span>Tech Lead</span><span>Team Scaling</span><span>Hiring</span><span>Architecture</span><span>Cross-functional Delivery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="education" class="section container reveal">
+      <div class="section-head">
+        <p class="eyebrow">Education &amp; Awards</p>
+        <h2>Foundation &amp; recognition</h2>
+      </div>
+      <div class="edu-grid">
+        <article class="edu-card">
+          <h3>B.Tech · Computer Science</h3>
+          <p>Lovely Professional University · 2014 — 2018 · GPA 7.2</p>
+          <p class="muted">Cricket, basketball, chess, competitive programming · President, CYPHER coding club</p>
+        </article>
+        <article class="edu-card">
+          <h3>Competitive programming</h3>
+          <ul class="compact-list">
+            <li>Google Code Jam 2017 — Qualification Round</li>
+            <li>Codechef SnackDown — Pre-Elimination (2016 &amp; 2017)</li>
+            <li>1st place — Code Samurai &amp; Code Manthon, LPU</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-contact">
+      <div class="container reveal">
+        <div class="contact-card">
+          <div class="section-head">
+            <p class="eyebrow">Contact</p>
+            <h2>Let's connect</h2>
+            <p class="lead">Open to senior engineering, tech lead, and platform architecture conversations.</p>
+          </div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:atulmishra1996@gmail.com">atulmishra1996@gmail.com</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/atul-mishra-96b4a2a3/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn btn-ghost" href="https://github.com/atulmishra1996" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-ghost" href="https://www.hackerrank.com/KILLCODE" target="_blank" rel="noopener">HackerRank</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Atul Mishra. Built with HTML, CSS &amp; JS.</p>
+      <a href="#top" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

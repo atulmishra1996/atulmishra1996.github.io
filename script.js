@@ -1,20 +1,59 @@
-// Smooth scroll for navigation links
-document.querySelectorAll('.nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
-});
+(function () {
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-// Simple contact form handler (no backend, just a thank you alert)
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Thank you for reaching out! I will get back to you soon.');
-    this.reset();
-  });
-} 
+  const toggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (toggle && navLinks) {
+    toggle.addEventListener("click", () => {
+      const open = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!open));
+      navLinks.classList.toggle("open", !open);
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        toggle.setAttribute("aria-expanded", "false");
+        navLinks.classList.remove("open");
+      });
+    });
+  }
+
+  const reveals = document.querySelectorAll(".reveal");
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+    );
+    reveals.forEach((el) => observer.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add("visible"));
+  }
+
+  const sections = document.querySelectorAll("section[id]");
+  const navAnchors = document.querySelectorAll(".nav-links a");
+
+  if ("IntersectionObserver" in window && navAnchors.length) {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const id = entry.target.getAttribute("id");
+          navAnchors.forEach((a) => {
+            a.style.color = a.getAttribute("href") === `#${id}` ? "var(--text)" : "";
+          });
+        });
+      },
+      { rootMargin: "-40% 0px -50% 0px", threshold: 0 },
+    );
+    sections.forEach((s) => sectionObserver.observe(s));
+  }
+})();

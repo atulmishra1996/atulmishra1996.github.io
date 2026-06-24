@@ -1,4 +1,6 @@
 (function () {
+  document.documentElement.classList.add("js");
+
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 

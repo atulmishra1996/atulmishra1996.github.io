@@ -2,20 +2,17 @@
 
 ## How this site deploys
 
-- **One workflow only:** `.github/workflows/deploy.yml`
-- **Publishing source:** GitHub Actions (Settings → Pages → Build and deployment → Source: GitHub Actions)
-- **Do not** add a second Pages workflow
-- **Do not** cancel a running deploy job mid-flight — it wedges the Pages CDN queue for ~30+ minutes
+- **Legacy branch deploy** from `main` (Settings → Pages → Source: Deploy from a branch → `main` / root)
+- **One built-in workflow only:** `pages-build-deployment` (automatic on every push)
+- **No custom Actions workflow** — a second deploy pipeline causes CDN lock-ups and stuck runs
+- **Never cancel** a running `pages-build-deployment` mid-flight
 
-## If deploy gets stuck
+## If deploy fails or looks stuck
 
-1. Wait 10–15 minutes for the in-progress CDN deploy to finish or time out
-2. Re-run the failed workflow from the Actions tab (do not start a second push)
-3. If still blocked, cancel the wedged Pages deployment:
-   ```bash
-   gh api -X POST repos/atulmishra1996/atulmishra1996.github.io/pages/deployments/<PAGES_BUILD_VERSION>/cancel
-   ```
-   (`PAGES_BUILD_VERSION` is shown in the failed deploy log)
+1. Wait 5–10 minutes — CDN deploys can take several minutes after conflicts
+2. Check status: `gh api repos/atulmishra1996/atulmishra1996.github.io/pages --jq '.status'`
+3. Re-trigger one build only: `gh api -X POST repos/atulmishra1996/atulmishra1996.github.io/pages/builds`
+4. Do **not** push again or start a second workflow while one is in progress
 
 ## Local preview
 

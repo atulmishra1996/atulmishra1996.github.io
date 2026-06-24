@@ -40,6 +40,19 @@
     reveals.forEach((el) => el.classList.add("visible"));
   }
 
+  document.querySelectorAll(".journey-card-toggle").forEach((toggle) => {
+    toggle.addEventListener("click", () => {
+      const card = toggle.closest(".journey-card");
+      const body = card?.querySelector(".journey-card-body");
+      if (!card || !body) return;
+
+      const expanded = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!expanded));
+      card.setAttribute("data-expanded", String(!expanded));
+      body.hidden = expanded;
+    });
+  });
+
   const sections = document.querySelectorAll("section[id]");
   const navAnchors = document.querySelectorAll(".nav-links a");
 

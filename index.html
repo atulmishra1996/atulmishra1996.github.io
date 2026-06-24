@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Atul Mishra — Senior Software Engineer & Tech Lead building AI platforms, distributed systems, and enterprise-scale products." />
+  <meta name="description" content="Atul Mishra — Senior Software Engineer &amp; Tech Lead building AI platforms, distributed systems, and enterprise-scale products." />
   <title>Atul Mishra · Senior Software Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- Scroll progress bar -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
   <div class="bg-glow" aria-hidden="true"></div>
 
   <header class="site-header" id="top">
@@ -41,11 +44,15 @@
             height="168"
             loading="eager"
             decoding="async"
-            onerror="this.hidden=true;this.nextElementSibling.hidden=false"
+            onerror="this.style.display='none';this.nextElementSibling.removeAttribute('hidden')"
           />
           <div class="hero-photo-fallback" hidden aria-hidden="true">AM</div>
         </div>
-        <div class="hero-content">
+        <div class="hero-content hero-animate">
+          <p class="hero-badge">
+            <span class="badge-dot"></span>
+            Currently @ Zinnia &middot; Building AI platforms
+          </p>
           <h1 class="hero-title">
             Hi, I'm <span class="gradient-text">Atul Mishra</span>
           </h1>
@@ -66,20 +73,20 @@
           </div>
         </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat">
+      <div class="hero-stats hero-animate hero-animate--delay">
+        <div class="stat stat--years">
           <strong>9+</strong>
           <span>Years experience</span>
         </div>
-        <div class="stat">
+        <div class="stat stat--records">
           <strong>400M+</strong>
           <span>Records migrated</span>
         </div>
-        <div class="stat">
+        <div class="stat stat--engineers">
           <strong>30+</strong>
           <span>Engineers led</span>
         </div>
-        <div class="stat">
+        <div class="stat stat--ai">
           <strong>6</strong>
           <span>AI microservices shipped</span>
         </div>
@@ -105,10 +112,22 @@
           backend, frontend, DevOps, and QA.
         </p>
         <ul class="about-highlights">
-          <li>Tech Lead at Zinnia — insurtech platforms serving 100+ carriers</li>
-          <li>First backend engineer → Engineering Lead at xalts (financial infrastructure)</li>
-          <li>Backend &amp; platform experience at Simpl, Jisr, Zynga, and Hotstar</li>
-          <li>B.Tech Computer Science, Lovely Professional University</li>
+          <li>
+            <span class="highlight-icon highlight-icon--zinnia">Z</span>
+            <div><strong>Tech Lead at Zinnia</strong> — insurtech platforms serving 100+ carriers</div>
+          </li>
+          <li>
+            <span class="highlight-icon highlight-icon--xalts">X</span>
+            <div><strong>First backend engineer → Engineering Lead at xalts</strong> (financial infrastructure)</div>
+          </li>
+          <li>
+            <span class="highlight-icon highlight-icon--exp">→</span>
+            <div>Backend &amp; platform experience at <strong>Simpl, Jisr, Zynga, and Hotstar</strong></div>
+          </li>
+          <li>
+            <span class="highlight-icon highlight-icon--edu">🎓</span>
+            <div>B.Tech Computer Science, <strong>Lovely Professional University</strong></div>
+          </li>
         </ul>
       </div>
     </section>
@@ -146,14 +165,7 @@
             </div>
           </div>
 
-          <!-- 2025 -->
-          <div class="journey-row journey-row--spine-only" data-year="2025">
-            <div class="journey-year">2025</div>
-            <div class="journey-career"></div>
-            <div class="journey-side"></div>
-          </div>
-
-          <!-- 2024 -->
+          <!-- 2024–2025 (combined with Zinnia) -->
           <div class="journey-row" data-year="2024">
             <div class="journey-year">2024</div>
             <div class="journey-career">
@@ -287,13 +299,6 @@
             <div class="journey-side"></div>
           </div>
 
-          <!-- 2020 -->
-          <div class="journey-row journey-row--spine-only" data-year="2020">
-            <div class="journey-year">2020</div>
-            <div class="journey-career"></div>
-            <div class="journey-side"></div>
-          </div>
-
           <!-- 2019 -->
           <div class="journey-row" data-year="2019">
             <div class="journey-year">2019</div>
@@ -421,15 +426,8 @@
             </div>
           </div>
 
-          <!-- 2015 -->
-          <div class="journey-row journey-row--spine-only" data-year="2015">
-            <div class="journey-year">2015</div>
-            <div class="journey-career"></div>
-            <div class="journey-side"></div>
-          </div>
-
-          <!-- 2014 -->
-          <div class="journey-row journey-row--spine-only" data-year="2014">
+          <!-- 2014 start -->
+          <div class="journey-row journey-row--start" data-year="2014">
             <div class="journey-year">2014</div>
             <div class="journey-career">
               <article class="journey-milestone journey-milestone--start">
@@ -536,38 +534,38 @@
           <h2>Technical toolkit</h2>
         </div>
         <div class="skills-grid">
-          <div class="skill-group">
-            <h3>Languages</h3>
+          <div class="skill-group skill-group--lang">
+            <h3><span class="skill-group-icon">⌨️</span> Languages</h3>
             <div class="skill-pills">
               <span>Java</span><span>TypeScript</span><span>Python</span><span>Ruby</span><span>C++</span><span>C#</span><span>Swift</span>
             </div>
           </div>
-          <div class="skill-group">
-            <h3>Backend &amp; Frameworks</h3>
+          <div class="skill-group skill-group--backend">
+            <h3><span class="skill-group-icon">⚙️</span> Backend &amp; Frameworks</h3>
             <div class="skill-pills">
               <span>Spring Boot</span><span>FastAPI</span><span>Fastify</span><span>Rails</span><span>Node.js</span><span>Next.js</span><span>GraphQL</span><span>REST</span>
             </div>
           </div>
-          <div class="skill-group">
-            <h3>Data &amp; Messaging</h3>
+          <div class="skill-group skill-group--data">
+            <h3><span class="skill-group-icon">🗄️</span> Data &amp; Messaging</h3>
             <div class="skill-pills">
               <span>PostgreSQL</span><span>MongoDB</span><span>DynamoDB</span><span>Neo4j</span><span>Kafka</span><span>RabbitMQ</span><span>Redis</span>
             </div>
           </div>
-          <div class="skill-group">
-            <h3>Cloud &amp; DevOps</h3>
+          <div class="skill-group skill-group--cloud">
+            <h3><span class="skill-group-icon">☁️</span> Cloud &amp; DevOps</h3>
             <div class="skill-pills">
               <span>AWS</span><span>GCP</span><span>Azure</span><span>Kubernetes</span><span>CI/CD</span><span>Docker</span><span>Terraform</span>
             </div>
           </div>
-          <div class="skill-group">
-            <h3>AI &amp; Platform</h3>
+          <div class="skill-group skill-group--ai">
+            <h3><span class="skill-group-icon">🤖</span> AI &amp; Platform</h3>
             <div class="skill-pills">
               <span>LLM Orchestration</span><span>RAG</span><span>Multi-agent Systems</span><span>System Design</span><span>Event-Driven Architecture</span>
             </div>
           </div>
-          <div class="skill-group">
-            <h3>Leadership</h3>
+          <div class="skill-group skill-group--lead">
+            <h3><span class="skill-group-icon">🚀</span> Leadership</h3>
             <div class="skill-pills">
               <span>Tech Lead</span><span>Team Scaling</span><span>Hiring</span><span>Architecture</span><span>Cross-functional Delivery</span>
             </div>
@@ -582,7 +580,16 @@
           <div class="section-head">
             <p class="eyebrow">Contact</p>
             <h2>Let's connect</h2>
-            <p class="lead">Reach out anytime — happy to chat about engineering, platforms, or open source.</p>
+            <p class="lead">Open to engineering conversations, collaboration, and interesting problems. Usually reply within a day.</p>
+          </div>
+          <div class="contact-meta-row">
+            <span class="contact-meta-item">
+              <span class="contact-dot"></span>
+              Available to chat
+            </span>
+            <span class="contact-meta-item">
+              📍 Bengaluru, IST (UTC+5:30)
+            </span>
           </div>
           <div class="contact-actions">
             <a class="btn btn-primary" href="mailto:atulmishra1996@gmail.com">atulmishra1996@gmail.com</a>
@@ -598,7 +605,7 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© <span id="year"></span> Atul Mishra. Built with HTML, CSS &amp; JS.</p>
+      <p>© <span id="year"></span> Atul Mishra · Senior Engineer &amp; Tech Lead, Bengaluru</p>
       <a href="#top" class="back-top">Back to top ↑</a>
     </div>
   </footer>

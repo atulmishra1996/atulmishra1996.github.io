@@ -390,7 +390,7 @@ img {
 /* ── Stats ── */
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 2.5rem;
   padding-top: 2rem;
@@ -473,6 +473,32 @@ img {
 }
 .stat--ai strong {
   background: linear-gradient(135deg, #6ee7b7, #34d399);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.stat--rag {
+  border-color: rgba(251, 191, 36, 0.2);
+}
+.stat--rag:hover {
+  border-color: rgba(251, 191, 36, 0.45);
+  box-shadow: 0 8px 24px rgba(251, 191, 36, 0.1);
+}
+.stat--rag strong {
+  background: linear-gradient(135deg, #fcd34d, #f59e0b);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.stat--ms {
+  border-color: rgba(249, 115, 22, 0.2);
+}
+.stat--ms:hover {
+  border-color: rgba(249, 115, 22, 0.45);
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.1);
+}
+.stat--ms strong {
+  background: linear-gradient(135deg, #fb923c, #f97316);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -741,6 +767,18 @@ img {
   position: relative;
 }
 
+/* Active / current role card */
+.journey-card--active {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.15), 0 8px 32px rgba(99, 102, 241, 0.1);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.07) 0%, rgba(34, 211, 238, 0.04) 100%);
+}
+
+.journey-card--active:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.25), 0 12px 40px rgba(99, 102, 241, 0.15);
+}
+
 .journey-card[data-expanded="true"] .journey-card-toggle::after {
   content: "−";
   background: rgba(99, 102, 241, 0.15);
@@ -917,6 +955,56 @@ img {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--border);
   align-self: start;
+}
+
+/* Active / present role date badge */
+.timeline-date--active {
+  background: rgba(52, 211, 153, 0.08);
+  border-color: rgba(52, 211, 153, 0.35);
+  color: #6ee7b7;
+  animation: heroPulse 2.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-date--active { animation: none; }
+}
+
+/* Continued row marker for Zinnia 2024 anchor */
+.journey-career--continued {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.4rem;
+}
+
+.journey-continued-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--accent);
+  opacity: 0.7;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  border: 1px dashed rgba(99, 102, 241, 0.35);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+/* Writing / blog side card */
+.journey-side-card--writing {
+  background: rgba(167, 139, 250, 0.06);
+  border-color: rgba(167, 139, 250, 0.2);
+}
+
+.journey-side-card--writing:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+  box-shadow: 0 6px 20px rgba(167, 139, 250, 0.1);
+}
+
+.journey-side-card--writing .journey-side-meta {
+  color: #c4b5fd;
+}
+
+/* Multiple side cards stacked in same cell */
+.journey-side > .journey-side-card + .journey-side-card {
+  margin-top: 0.75rem;
 }
 
 .timeline-location {

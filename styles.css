@@ -403,6 +403,8 @@ img {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border);
   transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  position: relative;
+  cursor: default;
 }
 
 .stat:hover {
@@ -464,40 +466,40 @@ img {
   background-clip: text;
 }
 
-.stat--ai {
+.stat--users {
   border-color: rgba(52, 211, 153, 0.2);
 }
-.stat--ai:hover {
+.stat--users:hover {
   border-color: rgba(52, 211, 153, 0.45);
   box-shadow: 0 8px 24px rgba(52, 211, 153, 0.12);
 }
-.stat--ai strong {
+.stat--users strong {
   background: linear-gradient(135deg, #6ee7b7, #34d399);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
-.stat--rag {
+.stat--industries {
   border-color: rgba(251, 191, 36, 0.2);
 }
-.stat--rag:hover {
+.stat--industries:hover {
   border-color: rgba(251, 191, 36, 0.45);
   box-shadow: 0 8px 24px rgba(251, 191, 36, 0.1);
 }
-.stat--rag strong {
+.stat--industries strong {
   background: linear-gradient(135deg, #fcd34d, #f59e0b);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
-.stat--ms {
+.stat--writing {
   border-color: rgba(249, 115, 22, 0.2);
 }
-.stat--ms:hover {
+.stat--writing:hover {
   border-color: rgba(249, 115, 22, 0.45);
   box-shadow: 0 8px 24px rgba(249, 115, 22, 0.1);
 }
-.stat--ms strong {
+.stat--writing strong {
   background: linear-gradient(135deg, #fb923c, #f97316);
   -webkit-background-clip: text;
   background-clip: text;
@@ -508,6 +510,51 @@ img {
   color: var(--text-muted);
   margin-top: 0.15rem;
   display: block;
+}
+
+/* ── Stat tooltip ── */
+.stat-tooltip {
+  position: absolute;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  width: 230px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 12px;
+  background: rgba(10, 11, 15, 0.96);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255,255,255,0.04);
+  backdrop-filter: blur(16px);
+  color: #d1d5db;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 60;
+  white-space: normal;
+}
+
+/* Arrow */
+.stat-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: rgba(10, 11, 15, 0.96);
+}
+
+.stat:hover .stat-tooltip,
+.stat:focus .stat-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stat-tooltip { transition: opacity 0.1s ease; }
 }
 
 /* ── Sections ── */

@@ -5,10 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Atul Mishra — Senior Software Engineer &amp; Tech Lead building AI platforms, distributed systems, and enterprise-scale products." />
   <title>Atul Mishra · Senior Software Engineer</title>
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://atulmishra1996.github.io/" />
+  <meta property="og:title" content="Atul Mishra · Senior Software Engineer &amp; Tech Lead" />
+  <meta property="og:description" content="Building AI-native engineering systems: autonomous SDLC agents, LLM orchestration, RAG pipelines, and large-scale distributed platforms. 9+ years, 400M+ records, teams of 30+ engineers." />
+  <meta property="og:image" content="https://atulmishra1996.github.io/assets/atul_photo.jpg" />
+  <meta property="og:site_name" content="Atul Mishra" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Atul Mishra · Senior Software Engineer &amp; Tech Lead" />
+  <meta name="twitter:description" content="AI platforms, distributed systems, and engineering leadership. 9+ years shipping at scale." />
+  <meta name="twitter:image" content="https://atulmishra1996.github.io/assets/atul_photo.jpg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Atul Mishra",
+    "jobTitle": "Senior Software Engineer & Tech Lead",
+    "url": "https://atulmishra1996.github.io/",
+    "image": "https://atulmishra1996.github.io/assets/atul_photo.jpg",
+    "email": "mailto:atulmishra1996@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bengaluru",
+      "addressCountry": "IN"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/atul-mishra-96b4a2a3/",
+      "https://github.com/atulmishra1996"
+    ],
+    "knowsAbout": [
+      "AI Engineering", "LLM Orchestration", "RAG", "Distributed Systems",
+      "Kubernetes", "Data Engineering", "Engineering Leadership"
+    ]
+  }
+  </script>
 </head>
 <body>
   <!-- Scroll progress bar -->
@@ -75,34 +115,29 @@
       </div>
       <div class="hero-stats hero-animate hero-animate--delay">
         <div class="stat stat--years" tabindex="0">
-          <strong>9+</strong>
+          <strong data-target="9" data-suffix="+">9+</strong>
           <span>Years experience</span>
           <div class="stat-tooltip">9 years shipping production-grade systems across 7 companies — from gaming and streaming to fintech and AI engineering.</div>
         </div>
         <div class="stat stat--records" tabindex="0">
-          <strong>400M+</strong>
+          <strong data-target="400" data-suffix="M+">400M+</strong>
           <span>DB records at scale</span>
           <div class="stat-tooltip">400M+ records migrated (MSSQL → MongoDB) and ~70% query optimisation on critical execution paths — deep database engineering across both scale and performance.</div>
         </div>
         <div class="stat stat--engineers" tabindex="0">
-          <strong>30+</strong>
+          <strong data-target="30" data-suffix="+">30+</strong>
           <span>Engineers led</span>
           <div class="stat-tooltip">Scaled teams from 8 → 30+ engineers at xalts. Owned end-to-end hiring across backend, frontend, DevOps, and QA disciplines.</div>
         </div>
         <div class="stat stat--users" tabindex="0">
-          <strong>10M+</strong>
+          <strong data-target="10" data-suffix="M+">10M+</strong>
           <span>Users impacted</span>
           <div class="stat-tooltip">Built live leaderboard, voting, and scorecard features for IPL &amp; Bigg Boss at Disney+ Hotstar — serving tens of millions of concurrent users.</div>
         </div>
         <div class="stat stat--industries" tabindex="0">
-          <strong>7</strong>
+          <strong data-target="7" data-suffix="">7</strong>
           <span>Industries</span>
           <div class="stat-tooltip">Gaming · Fintech · Insurtech · Streaming · HR Tech · No-code Financial · AI Engineering — fast adapter across domains.</div>
-        </div>
-        <div class="stat stat--writing" tabindex="0">
-          <strong>1</strong>
-          <span>Tech article co-authored</span>
-          <div class="stat-tooltip">Co-authored "Introducing Mosaic AI" on LinkedIn Pulse — a deep technical overview of AI-powered architecture intelligence. 63 reactions, 6 comments.</div>
         </div>
       </div>
     </section>
@@ -168,6 +203,7 @@
             <div class="journey-career">
               <article class="journey-card journey-card--active" data-expanded="false">
                 <button class="journey-card-toggle" type="button" aria-expanded="false">
+                  <span class="journey-toggle-hint" aria-hidden="true">Details</span>
                   <div class="journey-card-head">
                     <div class="journey-card-logo" aria-hidden="true">Z</div>
                     <div class="journey-card-summary">
@@ -240,6 +276,7 @@
             <div class="journey-career">
               <article class="journey-card" data-expanded="false">
                 <button class="journey-card-toggle" type="button" aria-expanded="false">
+                  <span class="journey-toggle-hint" aria-hidden="true">Details</span>
                   <div class="journey-card-head">
                     <div class="journey-card-logo" aria-hidden="true">X</div>
                     <div class="journey-card-summary">
@@ -273,6 +310,7 @@
             <div class="journey-career">
               <article class="journey-card" data-expanded="false">
                 <button class="journey-card-toggle" type="button" aria-expanded="false">
+                  <span class="journey-toggle-hint" aria-hidden="true">Details</span>
                   <div class="journey-card-head">
                     <div class="journey-card-logo" aria-hidden="true">S</div>
                     <div class="journey-card-summary">
@@ -302,6 +340,7 @@
             <div class="journey-career">
               <article class="journey-card" data-expanded="false">
                 <button class="journey-card-toggle" type="button" aria-expanded="false">
+                  <span class="journey-toggle-hint" aria-hidden="true">Details</span>
                   <div class="journey-card-head">
                     <div class="journey-card-logo" aria-hidden="true">J</div>
                     <div class="journey-card-summary">
@@ -330,6 +369,7 @@
             <div class="journey-career">
               <article class="journey-card" data-expanded="false">
                 <button class="journey-card-toggle" type="button" aria-expanded="false">
+                  <span class="journey-toggle-hint" aria-hidden="true">Details</span>
                   <div class="journey-card-head">
                     <div class="journey-card-logo" aria-hidden="true">Z</div>
                     <div class="journey-card-summary">
@@ -358,6 +398,7 @@
             <div class="journey-career">
               <article class="journey-card" data-expanded="false">
                 <button class="journey-card-toggle" type="button" aria-expanded="false">
+                  <span class="journey-toggle-hint" aria-hidden="true">Details</span>
                   <div class="journey-card-head">
                     <div class="journey-card-logo journey-card-logo--hotstar" aria-hidden="true">H</div>
                     <div class="journey-card-summary">
@@ -394,6 +435,7 @@
             <div class="journey-career">
               <article class="journey-card" data-expanded="false">
                 <button class="journey-card-toggle" type="button" aria-expanded="false">
+                  <span class="journey-toggle-hint" aria-hidden="true">Details</span>
                   <div class="journey-card-head">
                     <div class="journey-card-logo" aria-hidden="true">C</div>
                     <div class="journey-card-summary">
@@ -475,7 +517,7 @@
         <h2>Selected work &amp; side builds</h2>
       </div>
       <div class="project-grid">
-        <article class="project-card featured">
+        <article class="project-card featured" data-tags="next.js,typescript,postgres,ai">
           <div class="project-icon">𝕏</div>
           <h3>X Tweet Helper</h3>
           <p class="project-meta">Open source · Next.js · 2026</p>
@@ -486,37 +528,40 @@
           <a class="project-link" href="https://github.com/atulmishra1996/x-tweet-helper" target="_blank" rel="noopener">View on GitHub →</a>
         </article>
 
-        <article class="project-card featured">
+        <article class="project-card featured" data-tags="llm,neo4j,tree-sitter,kubernetes,k8s,ai">
           <div class="project-icon">🤖</div>
           <h3>MinionBot</h3>
           <p class="project-meta">Zinnia · AI Platform · 2024 — Present</p>
           <p>AI software engineering platform: Jira/Confluence → design → multi-repo code generation → validation → automated PRs. Human-in-the-loop governance with streaming workflows and sandbox validation.</p>
+          <p class="project-impact"><strong>Impact:</strong> Full-SDLC autonomous agent shipping production PRs across 6 AI microservices on Kubernetes.</p>
           <div class="tags">
             <span>LLM Orchestration</span><span>Neo4j</span><span>Tree-sitter</span><span>K8s</span>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card featured" data-tags="java,mongodb,mssql,data">
           <div class="project-icon">📊</div>
           <h3>Enterprise Migration Platform</h3>
           <p class="project-meta">Zinnia · Data Engineering · 2024</p>
           <p>High-performance migration service for 400M+ records from MSSQL to MongoDB — multi-threaded, fault-tolerant, horizontally scalable. Now the standard for enterprise data transitions.</p>
+          <p class="project-impact"><strong>Impact:</strong> 400M+ records migrated; adopted as the company standard for large-scale data transitions.</p>
           <div class="tags">
             <span>Java</span><span>MongoDB</span><span>MSSQL</span>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-tags="rag,llm,vector,ai">
           <div class="project-icon">💬</div>
           <h3>AI Operational Assistant</h3>
           <p class="project-meta">Zinnia · RAG · 2024</p>
           <p>In-house RAG chat system over 50K+ documents with MMR, ColBERT, and multi-query retrieval for production support accuracy.</p>
+          <p class="project-impact"><strong>Impact:</strong> Production RAG assistant over 50K+ docs reducing ops escalation.</p>
           <div class="tags">
             <span>RAG</span><span>LLM</span><span>Vector Search</span>
           </div>
         </article>
 
-        <article class="project-card">
+        <article class="project-card" data-tags="typescript,fastify,aws,gcp,microservices">
           <div class="project-icon">⚡</div>
           <h3>No-Code Platform (CDA)</h3>
           <p class="project-meta">xalts · Distributed Systems · 2023 — 2024</p>
@@ -550,6 +595,23 @@
           <a class="project-link" href="https://github.com/Killcode1996/Budgie" target="_blank" rel="noopener">View on GitHub →</a>
         </article>
       </div>
+    </section>
+
+    <!-- Writing highlight -->
+    <section id="writing" class="section container reveal">
+      <div class="section-head">
+        <p class="eyebrow">Writing</p>
+        <h2>Architecture intelligence at scale</h2>
+      </div>
+      <article class="writing-card">
+        <div class="writing-icon">✍️</div>
+        <div class="writing-body">
+          <h3>Introducing Mosaic AI: The Future of Software Architecture Intelligence</h3>
+          <p class="writing-meta">Co-authored · LinkedIn Pulse · Jun 2026 · 63 reactions</p>
+          <p>An intelligent copilot that turns complex distributed platforms into queryable, evidence-backed knowledge graphs. Uses Neo4j GraphRAG, Tree-sitter indexing, and multi-stage retrieval to answer architecture questions across 100+ services.</p>
+          <a class="project-link" href="https://www.linkedin.com/pulse/introducing-mosaic-ai-future-software-architecture-lasya-ippagunta-i8xof/" target="_blank" rel="noopener">Read the full article on LinkedIn →</a>
+        </div>
+      </article>
     </section>
 
     <section id="skills" class="section section-alt">

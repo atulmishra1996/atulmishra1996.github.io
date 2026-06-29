@@ -99,4 +99,130 @@
     );
     sections.forEach((s) => sectionObserver.observe(s));
   }
+
+  // ── Animated stat counters ──
+  const prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const statNumbers = document.querySelectorAll(".hero-stats .stat strong[data-target]");
+
+  function animateCount(el, target, suffix, duration = 1100) {
+    if (prefersReduced) {
+      el.textContent = target + suffix;
+      return;
+    }
+    const start = 0;
+    const startTime = performance.now();
+
+    function step(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = Math.floor(start + (target - start) * eased);
+      el.textContent = current + suffix;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        el.textContent = target + suffix; // ensure exact
+      }
+    }
+    requestAnimationFrame(step);
+  }
+
+  if (statNumbers.length) {
+    const statsContainer = document.querySelector(".hero-stats");
+    if (statsContainer && "IntersectionObserver" in window) {
+      const statsObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              statNumbers.forEach((el) => {
+                if (el.dataset.animated) return;
+                const target = parseInt(el.dataset.target, 10);
+                const suffix = el.dataset.suffix || "";
+                if (!Number.isNaN(target)) {
+                  el.dataset.animated = "true";
+                  animateCount(el, target, suffix);
+                }
+              });
+              statsObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.35 }
+      );
+      statsObserver.observe(statsContainer);
+    } else {
+      // Fallback: set final values immediately
+      statNumbers.forEach((el) => {
+        const target = parseInt(el.dataset.target, 10);
+        const suffix = el.dataset.suffix || "";
+        if (!Number.isNaN(target)) el.textContent = target + suffix;
+      });
+    }
+  }
+
+  // ── Skills → Projects filter / highlight (lightweight) ──
+  const skillPills = document.querySelectorAll(".skill-pills span");
+  const projectCards = document.querySelectorAll(".project-grid .project-card");
+
+  if (skillPills.length && projectCards.length) {
+    let currentFilter = null;
+
+    const clearFilter = () => {
+      currentFilter = null;
+      projectCards.forEach((card) => card.classList.remove("is-filtered", "is-dimmed"));
+      skillPills.forEach((p) => p.classList.remove("is-active-filter"));
+    };
+
+    skillPills.forEach((pill) => {
+      pill.setAttribute("role", "button");
+      pill.setAttribute("tabindex", "0");
+
+      const activate = () => {
+        const skillText = pill.textContent.trim().toLowerCase();
+
+        if (currentFilter === skillText) {
+          clearFilter();
+          return;
+        }
+
+        currentFilter = skillText;
+        skillPills.forEach((p) => p.classList.remove("is-active-filter"));
+        pill.classList.add("is-active-filter");
+
+        projectCards.forEach((card) => {
+          const tags = (card.dataset.tags || "").toLowerCase();
+          const title = card.querySelector("h3")?.textContent.toLowerCase() || "";
+          const matches = tags.includes(skillText) || title.includes(skillText);
+
+          if (matches) {
+            card.classList.remove("is-dimmed");
+            card.classList.add("is-filtered");
+          } else {
+            card.classList.remove("is-filtered");
+            card.classList.add("is-dimmed");
+          }
+        });
+      };
+
+      pill.addEventListener("click", activate);
+      pill.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          activate();
+        }
+        if (e.key === "Escape") clearFilter();
+      });
+    });
+
+    // Optional: clicking anywhere on project grid clears filter
+    const grid = document.querySelector(".project-grid");
+    if (grid) {
+      grid.addEventListener("click", (e) => {
+        if (e.target.closest(".project-card") && currentFilter) {
+          // allow normal card behavior, optionally clear on background click only
+        }
+      });
+    }
+  }
 })();

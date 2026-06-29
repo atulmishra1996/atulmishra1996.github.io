@@ -390,7 +390,7 @@ img {
 /* ── Stats ── */
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
   margin-top: 2.5rem;
   padding-top: 2rem;
@@ -488,19 +488,6 @@ img {
 }
 .stat--industries strong {
   background: linear-gradient(135deg, #fcd34d, #f59e0b);
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-.stat--writing {
-  border-color: rgba(249, 115, 22, 0.2);
-}
-.stat--writing:hover {
-  border-color: rgba(249, 115, 22, 0.45);
-  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.1);
-}
-.stat--writing strong {
-  background: linear-gradient(135deg, #fb923c, #f97316);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -810,6 +797,20 @@ img {
   transition: transform var(--transition), background var(--transition);
 }
 
+.journey-toggle-hint {
+  position: absolute;
+  right: 3rem;
+  top: 1.35rem;
+  font-size: 0.7rem;
+  font-family: var(--mono);
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  opacity: 0.65;
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
 .journey-card {
   position: relative;
 }
@@ -831,6 +832,10 @@ img {
   background: rgba(99, 102, 241, 0.15);
   border-color: rgba(99, 102, 241, 0.35);
   color: var(--text);
+}
+
+.journey-card[data-expanded="true"] .journey-toggle-hint {
+  display: none;
 }
 
 .journey-card-head {
@@ -1086,6 +1091,24 @@ img {
 
 .skill-pills span:hover {
   transform: translateY(-1px);
+  cursor: pointer;
+}
+
+.skill-pills span.is-active-filter {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: var(--accent);
+  color: #c7d2fe;
+}
+
+.project-card.is-filtered {
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.25);
+}
+
+.project-card.is-dimmed {
+  opacity: 0.35;
+  filter: saturate(0.6);
+  transition: opacity 0.15s ease, filter 0.15s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1165,6 +1188,63 @@ img {
 
 .project-link:hover {
   text-decoration: underline;
+}
+
+/* ── Writing highlight card ── */
+.writing-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.08), rgba(99, 102, 241, 0.04));
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.writing-card:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.writing-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.writing-body {
+  min-width: 0;
+}
+
+.writing-body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.writing-meta {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: #c4b5fd;
+  margin-bottom: 0.6rem;
+}
+
+.writing-body p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Project impact line */
+.project-impact {
+  font-size: 0.9rem;
+  color: #d1d5db;
+  margin: 0.1rem 0 0.4rem;
+}
+.project-impact strong {
+  color: #a5b4fc;
 }
 
 /* ── Skills ── */

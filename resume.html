@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atul Mishra — Resume</title>
+  <style>
+    @page { size: A4; margin: 0.45in 0.5in; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 9.2pt;
+      line-height: 1.38;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    a { color: #1d4ed8; text-decoration: none; }
+    h1 {
+      font-size: 22pt;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+    .subtitle {
+      font-size: 10.5pt;
+      color: #333;
+      margin-top: 2px;
+      font-weight: 500;
+    }
+    .contact {
+      margin-top: 6px;
+      font-size: 8.5pt;
+      color: #444;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px 10px;
+    }
+    .summary {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1.5px solid #1a1a1a;
+      font-size: 8.8pt;
+      color: #222;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      margin: 10px 0 12px;
+    }
+    .stat {
+      text-align: center;
+      padding: 6px 4px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .stat strong {
+      display: block;
+      font-size: 12pt;
+      font-weight: 700;
+      color: #111;
+    }
+    .stat span {
+      font-size: 7.2pt;
+      color: #555;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 1.65fr 1fr;
+      gap: 16px;
+    }
+    .section-title {
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 1.5px solid #1a1a1a;
+      padding-bottom: 3px;
+      margin: 0 0 8px;
+    }
+    .job { margin-bottom: 11px; }
+    .job-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .job-title { font-weight: 700; font-size: 9.5pt; }
+    .job-date { font-size: 8pt; color: #555; white-space: nowrap; }
+    .job-co { font-size: 8.5pt; color: #333; margin: 1px 0 3px; }
+    .job-tags {
+      font-size: 7.2pt;
+      color: #555;
+      margin-bottom: 4px;
+    }
+    .job ul { padding-left: 0; list-style: none; }
+    .job li {
+      position: relative;
+      padding-left: 10px;
+      margin-bottom: 3px;
+      font-size: 8.4pt;
+      color: #222;
+    }
+    .job li::before {
+      content: "‣";
+      position: absolute;
+      left: 0;
+      color: #444;
+    }
+    .chip {
+      display: inline-block;
+      margin: 2px 0 4px;
+      padding: 1px 6px;
+      border-radius: 999px;
+      font-size: 7pt;
+      font-weight: 600;
+      color: #0e7490;
+      background: #ecfeff;
+      border: 1px solid #a5f3fc;
+    }
+    .side-block { margin-bottom: 12px; }
+    .side-item { margin-bottom: 7px; }
+    .side-item h4 { font-size: 8.8pt; font-weight: 700; }
+    .side-meta { font-size: 7.5pt; color: #555; margin: 1px 0 2px; }
+    .side-item p { font-size: 8pt; color: #333; }
+    .skill-group { margin-bottom: 6px; }
+    .skill-group h4 {
+      font-size: 7.8pt;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 1px;
+    }
+    .skill-group p { font-size: 8pt; color: #333; }
+    .ach li {
+      font-size: 8pt;
+      margin-bottom: 3px;
+      color: #222;
+      list-style: none;
+      padding-left: 12px;
+      position: relative;
+    }
+    .ach li::before {
+      content: "🏆";
+      position: absolute;
+      left: 0;
+      font-size: 7pt;
+    }
+    .page-break { break-before: page; page-break-before: always; }
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Atul Mishra</h1>
+    <p class="subtitle">Staff Software Engineer · AI Systems Builder</p>
+    <div class="contact">
+      <span>Bengaluru, India · +91-9592029280</span>
+      <a href="mailto:atulmishra1996@gmail.com">atulmishra1996@gmail.com</a>
+      <a href="https://linkedin.com/in/atul-mishra-96b4a2a3">linkedin.com/in/atul-mishra-96b4a2a3</a>
+      <a href="https://github.com/atulmishra1996">github.com/atulmishra1996</a>
+      <a href="https://atulmishra1996.github.io/">atulmishra1996.github.io</a>
+    </div>
+    <p class="summary">
+      AI-native systems builder with 9+ years delivering production platforms at scale. Specialise in autonomous SDLC
+      agents, LLM orchestration, RAG pipelines, distributed backends, and enterprise data engineering. Solo-built
+      <strong>MinionBot</strong> — a full-SDLC AI platform powered by a knowledge graph of the Zinnia codebase
+      (powers Mosaic, Zenius, and code generation; 50+ daily users). Skip-promoted from Senior Software Engineer I
+      to Staff Software Engineer at Zinnia.
+    </p>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><strong>9+</strong><span>Years experience</span></div>
+    <div class="stat"><strong>50+</strong><span>Daily MinionBot users</span></div>
+    <div class="stat"><strong>10M+</strong><span>Users impacted</span></div>
+    <div class="stat"><strong>7</strong><span>Industries</span></div>
+  </div>
+
+  <div class="layout">
+    <main>
+      <h2 class="section-title">Experience</h2>
+
+      <article class="job">
+        <div class="job-head">
+          <span class="job-title">Staff Software Engineer</span>
+          <span class="job-date">Sep 2024 – Present</span>
+        </div>
+        <p class="job-co">Zinnia · Bengaluru, India (On-site)</p>
+        <span class="chip">Skip-promoted from SSE-1 · 2026</span>
+        <p class="job-tags">Java · Kubernetes · Neo4j · LLM Orchestration · RAG · Tree-sitter · Azure AD · MongoDB</p>
+        <ul>
+          <li>Solo-built <strong>MinionBot</strong> — full-SDLC AI platform backed by a knowledge graph of the Zinnia codebase. Powers chat (<strong>Mosaic</strong>), QA test suite (<strong>Zenius</strong>), and code generation; scaled from zero to <strong>50+ daily users</strong>.</li>
+          <li>Architected 6 independently deployable AI microservices: Tree-sitter indexing, Neo4j knowledge graphs, unified planning pipelines, sandbox validation, and LLM-powered code execution on Kubernetes with Azure AD.</li>
+          <li>Co-authored <strong>Mosaic AI</strong> — architecture copilot that makes Zinnia's distributed platform queryable and evidence-backed. <a href="https://linkedin.com/pulse/introducing-mosaic-ai-future-software-architecture-lasya-ippagunta-i8xof">LinkedIn Pulse →</a></li>
+          <li>Built enterprise migration platform moving <strong>400M+ records</strong> from MSSQL to MongoDB — multi-threaded, fault-tolerant, horizontally scalable.</li>
+          <li>Delivered RAG-based operational assistant over <strong>50,000+ documents</strong> using MMR, ColBERT, and multi-query retrieval.</li>
+          <li>Migrated legacy Camunda workflows to a custom Java orchestration service under sustained high load.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <span class="job-title">Engineering Lead</span>
+          <span class="job-date">Aug 2023 – Aug 2024</span>
+        </div>
+        <p class="job-co">xalts · Bangalore, India</p>
+        <p class="job-tags">TypeScript · Fastify · Java · Spring · AWS · GCP · RabbitMQ · PostgreSQL</p>
+        <ul>
+          <li>Joined as first backend engineer; grew to own backend, frontend, DevOps, and QA for the CDA no-code financial platform.</li>
+          <li>Scaled team from 8 to 30+ engineers — led hiring across backend, frontend, DevOps, and QA.</li>
+          <li>Designed distributed systems from scratch: webhook triggers, schedulers, token managers, and indexers.</li>
+          <li>Optimised critical CDA execution DB calls by ~70%; built deployment pipelines on AWS and GCP.</li>
+        </ul>
+      </article>
+
+      <article class="job page-break">
+        <div class="job-head">
+          <span class="job-title">Senior Software Engineer</span>
+          <span class="job-date">Jul 2022 – Apr 2023</span>
+        </div>
+        <p class="job-co">Simpl · Bangalore, India</p>
+        <p class="job-tags">Java · Spring Boot · Python · FastAPI · Kafka</p>
+        <ul>
+          <li>Shipped Banner Service end-to-end in Java/Spring Boot — personalised promotions at scale.</li>
+          <li>Integrated WordPress e-commerce checkout with Simpl's payment flow via Python/FastAPI.</li>
+          <li>Reduced consumer lag in Kafka-based event and message management pipelines.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <span class="job-title">Senior Software Developer</span>
+          <span class="job-date">Aug 2021 – Jul 2022</span>
+        </div>
+        <p class="job-co">Jisr HR · Remote</p>
+        <p class="job-tags">Ruby on Rails · Java · Kafka · AWS</p>
+        <ul>
+          <li>Built Performance Management service from scratch — goals, OKR tracking, and employee review cycles.</li>
+          <li>Collaborated with Payroll to optimise HR Attendance API performance.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <span class="job-title">Software Development Engineer</span>
+          <span class="job-date">Sep 2019 – Aug 2021</span>
+        </div>
+        <p class="job-co">Zynga · Bengaluru, India</p>
+        <p class="job-tags">C# · .NET · Unity · Python</p>
+        <ul>
+          <li>Developed Tropical Escape features and optimised orderboard crafting.</li>
+          <li>Shipped Collection Event mini-game — improved player engagement and retention.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <span class="job-title">Software Development Engineer</span>
+          <span class="job-date">Jul 2018 – Aug 2019</span>
+        </div>
+        <p class="job-co">Disney+ Hotstar · Mumbai, India</p>
+        <p class="job-tags">Swift · Objective-C · RxSwift · AWS</p>
+        <ul>
+          <li>iOS social pod: integrated AsyncDisplayKit, replacing Auto Layout for scroll performance.</li>
+          <li>Built leaderboard, scorecard, and voting for IPL &amp; Bigg Boss at tens-of-millions-user scale.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-head">
+          <span class="job-title">Software Engineer Intern</span>
+          <span class="job-date">Aug 2017 – Jun 2018</span>
+        </div>
+        <p class="job-co">ClearTax · Bengaluru, India</p>
+        <p class="job-tags">Ruby on Rails · Python</p>
+        <ul>
+          <li>Built Autopivot (Rails) integrated with Pivotal Tracker for sprint tracking.</li>
+          <li>Python scraper monitoring government websites with change notifications.</li>
+        </ul>
+      </article>
+    </main>
+
+    <aside>
+      <div class="side-block">
+        <h2 class="section-title">Writing</h2>
+        <div class="side-item">
+          <h4>Introducing Mosaic AI: The Future of Software Architecture Intelligence</h4>
+          <p class="side-meta">Co-authored · LinkedIn Pulse · Jun 2026</p>
+          <p><a href="https://linkedin.com/pulse/introducing-mosaic-ai-future-software-architecture-lasya-ippagunta-i8xof">Read on LinkedIn →</a></p>
+        </div>
+      </div>
+
+      <div class="side-block">
+        <h2 class="section-title">Open Source &amp; Projects</h2>
+        <div class="side-item">
+          <h4>MinionBot</h4>
+          <p class="side-meta">Zinnia · Solo-built SDLC Platform</p>
+          <p>Knowledge graph → Mosaic / Zenius / Codegen → PRs. 50+ daily users.</p>
+        </div>
+        <div class="side-item">
+          <h4>X Tweet Helper</h4>
+          <p class="side-meta">Next.js · TypeScript</p>
+          <p>Self-hosted X growth workspace — AI tweet studio, scheduling, analytics.</p>
+          <p><a href="https://github.com/atulmishra1996/x-tweet-helper">GitHub →</a></p>
+        </div>
+        <div class="side-item">
+          <h4>Personal Life Dashboard</h4>
+          <p class="side-meta">React · Side project</p>
+          <p>Productivity dashboard for personal life metrics and goals.</p>
+          <p><a href="https://github.com/atulmishra1996/personal-life-dashboard">GitHub →</a></p>
+        </div>
+      </div>
+
+      <div class="side-block">
+        <h2 class="section-title">Education</h2>
+        <div class="side-item">
+          <h4>B.Tech — Computer Science</h4>
+          <p class="side-meta">Lovely Professional University</p>
+          <p>2014 – 2018 · GPA 7.2<br />President, CYPHER Coding Club</p>
+        </div>
+      </div>
+
+      <div class="side-block">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skill-group">
+          <h4>Languages</h4>
+          <p>Java · TypeScript · Python · Ruby · C++ · C# · Swift</p>
+        </div>
+        <div class="skill-group">
+          <h4>Backend &amp; Frameworks</h4>
+          <p>Spring Boot · FastAPI · Fastify · Rails · Node.js · Next.js · GraphQL · REST</p>
+        </div>
+        <div class="skill-group">
+          <h4>Data &amp; Messaging</h4>
+          <p>PostgreSQL · MongoDB · DynamoDB · Neo4j · Kafka · RabbitMQ · Redis · MSSQL</p>
+        </div>
+        <div class="skill-group">
+          <h4>Cloud &amp; DevOps</h4>
+          <p>AWS · GCP · Azure · Kubernetes · Docker · Terraform · CI/CD</p>
+        </div>
+        <div class="skill-group">
+          <h4>AI &amp; Platform</h4>
+          <p>LLM Orchestration · RAG · Multi-agent · Tree-sitter · Neo4j KG · ColBERT · Azure AD</p>
+        </div>
+        <div class="skill-group">
+          <h4>Leadership</h4>
+          <p>Staff Engineering · Hiring · Architecture · Team Scaling</p>
+        </div>
+      </div>
+
+      <div class="side-block">
+        <h2 class="section-title">Achievements</h2>
+        <ul class="ach">
+          <li>Google Code Jam 2017 — Qualification Round</li>
+          <li>CodeChef SnackDown Pre-Elimination (2016 &amp; 2017)</li>
+          <li>1st Place — Code Samurai &amp; Code Manthon, LPU</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</body>
+</html>

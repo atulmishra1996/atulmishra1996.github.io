@@ -390,7 +390,7 @@ img {
 /* ── Stats ── */
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 2.5rem;
   padding-top: 2rem;
@@ -436,6 +436,19 @@ img {
 }
 .stat--years strong {
   background: linear-gradient(135deg, #a5b4fc, #818cf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.stat--minion {
+  border-color: rgba(34, 211, 238, 0.2);
+}
+.stat--minion:hover {
+  border-color: rgba(34, 211, 238, 0.45);
+  box-shadow: 0 8px 24px rgba(34, 211, 238, 0.12);
+}
+.stat--minion strong {
+  background: linear-gradient(135deg, #67e8f9, #22d3ee);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -877,6 +890,20 @@ img {
   line-height: 1.45;
 }
 
+.promo-chip {
+  display: inline-block;
+  margin-top: 0.45rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #a5f3fc;
+  background: rgba(34, 211, 238, 0.1);
+  border: 1px solid rgba(34, 211, 238, 0.3);
+}
+
 .journey-card-body {
   padding: 0 1.25rem 1.25rem;
   border-top: 1px solid var(--border);
@@ -1148,7 +1175,99 @@ img {
   border-color: rgba(99, 102, 241, 0.25);
 }
 
+.project-card--flagship {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(34, 211, 238, 0.08));
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.12), 0 12px 40px rgba(99, 102, 241, 0.08);
+}
+
+.project-card--flagship h3 {
+  font-size: 1.35rem;
+}
+
+/* ── MinionBot architecture flow ── */
+.arch-flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.4rem;
+  padding: 0.9rem 1rem;
+  margin: 0.25rem 0;
+  border-radius: var(--radius);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.arch-flow-step {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.45rem 0.7rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.arch-flow-step--core {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: rgba(99, 102, 241, 0.35);
+}
+
+.arch-flow-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.arch-flow-sub {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.arch-flow-arrow {
+  color: var(--accent-2);
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.arch-flow-branch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.arch-flow-branch .arch-flow-label {
+  padding: 0.3rem 0.55rem;
+  border-radius: 6px;
+  background: rgba(34, 211, 238, 0.08);
+  border: 1px solid rgba(34, 211, 238, 0.22);
+  color: #a5f3fc;
+}
+
+@media (max-width: 640px) {
+  .arch-flow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .arch-flow-arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+
+  .arch-flow-branch {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
 @media (min-width: 900px) {
+  .project-card--flagship {
+    grid-column: 1 / -1;
+  }
+
   .project-grid:has(.project-card.featured:nth-child(2)) {
     grid-template-columns: repeat(2, 1fr);
   }
